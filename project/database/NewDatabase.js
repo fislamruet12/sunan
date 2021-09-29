@@ -1,15 +1,14 @@
 import firebase from 'firebase'
 const firebaseConfig = {
-    apiKey: "AIzaSyBXCbbEa517kxAgueu9rZOM4wRFWN_6PvY",
-    authDomain: "jamius-sunan.firebaseapp.com",
-    databaseURL: "https://jamius-sunan-default-rtdb.firebaseio.com",
-    projectId: "jamius-sunan",
-    storageBucket: "jamius-sunan.appspot.com",
-    messagingSenderId: "697646150183",
-    appId: "1:697646150183:web:2c36502a874b361f4bd402",
-    measurementId: "G-BCXN5XWFG8"
-};
-
+    apiKey: "AIzaSyBT53spWj_dsqMkvN7Zf78Tkpzctl7GsLw",
+    authDomain: "hscfor2day.firebaseapp.com",
+    databaseURL: "https://hscfor2day.firebaseio.com",
+    projectId: "hscfor2day",
+    storageBucket: "hscfor2day.appspot.com",
+    messagingSenderId: "618664024109",
+    appId: "1:618664024109:web:581372d536bd1cf79080a4",
+    measurementId: "G-F7G79VT0BB"
+  };
 
 class NewDatabase {
     constructor(props) {

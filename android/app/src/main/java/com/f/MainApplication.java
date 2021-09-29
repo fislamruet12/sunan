@@ -1,4 +1,4 @@
-package com.fislam.sunnah;
+package com.fislam.naat;
 import androidx.multidex.MultiDexApplication;
 //import android.app.Application;
 import android.content.Context;

@@ -13,6 +13,8 @@ import Theory from './project/subject/Theory'
 import {Root} from 'native-base';
 
 import  Goppo from './project/goppo/Goppo'
+import ArtistNaat from './project/artist/ArtistNaat';
+import Play from './project/artist/Play';
 //import Send from './project/goppo/Send'
 //import Introduction from './project/goppo/Introduction'
 
@@ -48,8 +50,9 @@ const AppSwitchNavigator = createStackNavigator(
   {
     Welcome: {screen: Roots},
     Subject: {screen: Subject},
-    Catagory: {screen: Catagory},
-    Theory: {screen: Theory},
+    ArtistNaat:{screen:ArtistNaat},
+    Play:{screen:Play},
+   // Theory: {screen: Theory},
     createChat: {screen: createChat},
   },
   {

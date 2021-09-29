@@ -30,11 +30,11 @@ cruncherEnabled = false
 }
 
     defaultConfig {
-        applicationId "com.fislam.sunnah"
+        applicationId "com.fislam.naat"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "10.0"
+        versionName "1.0"
         multiDexEnabled true
     }
 

@@ -1,4 +1,4 @@
-package com.fislam.sunnah;
+package com.fislam.naat;
 import android.os.Bundle;
 import androidx.multidex.MultiDexApplication;
 import com.facebook.react.ReactActivity;

@@ -2,15 +2,15 @@ import firebase from 'firebase'
 import { AsyncStorage } from 'react-native'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBXCbbEa517kxAgueu9rZOM4wRFWN_6PvY",
-    authDomain: "jamius-sunan.firebaseapp.com",
-    databaseURL: "https://jamius-sunan-default-rtdb.firebaseio.com",
-    projectId: "jamius-sunan",
-    storageBucket: "jamius-sunan.appspot.com",
-    messagingSenderId: "697646150183",
-    appId: "1:697646150183:web:2c36502a874b361f4bd402",
-    measurementId: "G-BCXN5XWFG8"
-};
+    apiKey: "AIzaSyBT53spWj_dsqMkvN7Zf78Tkpzctl7GsLw",
+    authDomain: "hscfor2day.firebaseapp.com",
+    databaseURL: "https://hscfor2day.firebaseio.com",
+    projectId: "hscfor2day",
+    storageBucket: "hscfor2day.appspot.com",
+    messagingSenderId: "618664024109",
+    appId: "1:618664024109:web:581372d536bd1cf79080a4",
+    measurementId: "G-F7G79VT0BB"
+  };
 
 
 const storeData = async (store, pp) => {
@@ -33,24 +33,24 @@ class Test {
         }
     }
     getsetnet = (userdata) => {
-        //  console.log("topic")
+          console.log("topic")
 
         return new Promise((resolve, reject) => {
-            firebase.database().ref('/Test/Subject/').once('value', sub => {
+            firebase.database().ref('/Naat/Country/').once('value', sub => {
 
-                firebase.database().ref('/Test/Catagory/').once('value', catagory => {
+                firebase.database().ref('/Naat/Artist/').once('value', catagory => {
                     //        console.log(catagory.val())
-                    firebase.database().ref('/Test/Topic/').once('value', topic => {
+                    firebase.database().ref('/Naat/Lyric/').once('value', topic => {
 
-                        storeData('subject', sub.val())
-                        storeData('catagory', catagory.val())
-                        storeData('topic', topic.val())
+                        storeData('country', sub.val())
+                        storeData('artist', catagory.val())
+                        storeData('lyric', topic.val())
                         // console.log(sub.val())
                         if (sub.val() != null) {
                             resolve({
-                                chapter: sub.val(),
-                                lesson: catagory.val(),
-                                detail: topic.val()
+                                country: sub.val(),
+                                artist: catagory.val(),
+                                lyric: topic.val()
                             })
                         }
                     })

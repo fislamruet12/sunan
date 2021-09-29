@@ -1,7 +1,6 @@
 
 import React from 'react';
-
-import { isEmpty } from '../database/isEmpty'
+import {Linking} from 'react-native'
 
 import email from 'react-native-email'
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -9,10 +8,9 @@ import { Container, Header, Content, Button, ListItem, Text, Left, Body, Right, 
 import { SimpleAnimation } from 'react-native-simple-animations';
 import Share from 'react-native-share';
 
-import Test from '../database/Database'
 
 var url = '';
-var title = 'সূন্নাহ ভিত্তিক অ্যাপ';
+var title = 'Naat Collections';
 var message = '';
 
 
@@ -28,7 +26,7 @@ class Goppo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            url: null
+            url: 'https://play.google.com/store/apps/details?id=com.fislam.naat'
         };
         this.share = this.share.bind(this)
     }
@@ -40,7 +38,7 @@ class Goppo extends React.Component {
                 message: `${url}`,
             },
         });
-
+          var x=1
 
         if (this.state.url === null) {
            x=1
@@ -59,15 +57,7 @@ class Goppo extends React.Component {
     }
     componentDidMount() {
         global.top = this.props.navigation.state.routeName
-          const ob=new Test()
-          var promise=ob.share()
-          promise.then(dt=>{
-              var data=dt.data
-              this.setState({
-                  url:data
-              })
-          })
-
+         
     }
     handleEmail = () => {
         const to = ['fislam.ruet@mail.com'] // string or array of email addresses
@@ -79,11 +69,11 @@ class Goppo extends React.Component {
         console.log(this.state.url)
         return (
             <Container>
-                <Header style={{ backgroundColor: "red" }}>
+                <Header style={{ backgroundColor: '#fda8c9', }}>
 
                     <Left>
                         <Text onPress={() => this.props.navigation.navigate('Welcome')}>
-                            <Icon name="md-arrow-back" size={25} style={{ color: 'white' }}
+                            <Icon name="md-arrow-back" size={25} style={{ color: 'red' }}
 
                             />
 
@@ -92,7 +82,7 @@ class Goppo extends React.Component {
 
                     </Left>
                     <Body>
-                        <Title style={{ color: 'white' }}>আরও</Title>
+                        <Title style={{ color: 'red' }}>আরও</Title>
                     </Body>
 
 
@@ -137,7 +127,7 @@ class Goppo extends React.Component {
 
                             <ListItem
                                 thumbnail
-                                onPress={() => isEmpty(this.state.url) === false ? Linking.openURL(this.state.url) : null} >
+                                onPress={() =>  Linking.openURL("https://play.google.com/store/apps/details?id=com.fislam.naat")} >
                                 <Left >
 
                                     <Text style={{ color: '#f2b40a' }}>
